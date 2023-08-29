@@ -98,3 +98,17 @@ footer a{
 footer hr{
     width: 80%;
 }
+
+
+.whpag{
+    margin: auto;
+    margin-top:85px;
+    width: 550px;
+    height: 650px;
+    background-color: white;
+    font-size: x-small;
+}
+
+.whpag .Header h2{
+    font-family: 'Courier New', Courier, monospace;
+}

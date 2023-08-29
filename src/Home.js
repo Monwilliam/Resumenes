@@ -9,7 +9,7 @@ function Home() {
             <Link  to='/Coverleeter'>Create Coverletter</Link>
             </div>
             <footer>
-            <div className='ff'><Link  to='/About'>About</Link></div>
+            <Link  to='/About'>About</Link>
             <hr/>
             </footer>
         </div>
