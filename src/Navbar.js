@@ -7,9 +7,9 @@ function  Navbar() {
         <h1>Welcome</h1>
         <ul>
             <li><Link to='/'> Home </Link></li>
-            <li><Link to='/'> About </Link></li>
-            <li><Link to='/'> About </Link></li>
-            <li><Link to='/'> About </Link></li>
+            <li><Link to='/Resume'> Resume </Link></li>
+            <li><Link to='/Coverletter'> Coverletter </Link></li>
+            <li><Link to='/About'> About </Link></li>
         </ul>
     </nav>
     );
