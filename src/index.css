@@ -99,16 +99,132 @@ footer hr{
     width: 80%;
 }
 
+.Resm{
+    display: flex;
+    flex-direction: column;
+    height: 830px;
+}
 
 .whpag{
     margin: auto;
-    margin-top:85px;
-    width: 550px;
-    height: 650px;
+    margin-top:30px;
+    width: 500px;
+    height: 800px;
     background-color: white;
-    font-size: x-small;
+    font-size: smaller;
 }
 
-.whpag .Header h2{
+.whpag{
     font-family: 'Courier New', Courier, monospace;
+}
+
+.whpag .Header h3{
+    margin-bottom: 10px;
+}
+
+.whpag .Header{
+    align-items: center;
+    text-align: center;
+    padding-top: 7px;
+}
+
+.whpag .Header hr{
+    width: 90%;
+    margin-bottom: 8px;
+}
+
+.whpag .cont{
+    display:grid;
+    grid-template-columns: 4.5fr 3.5fr;
+}
+
+.left-cont + .right-cont{
+    border-left: 2px solid ;
+} 
+
+.whpag .cont .left-cont {
+    margin-left: 15px;
+}
+
+.whpag .cont .left-cont .ex{
+    padding: 6px;
+}
+
+.whpag .cont .left-cont h2{
+    padding-top: 1px;
+    padding-left: 10px;
+    background-color: rgb(233, 227, 227);
+    border-radius: 20px;
+    width: 50%;
+}
+
+.whpag .cont .left-cont hr{
+    margin-right: 28px;
+    margin-top: 20px;
+}
+
+.cont .left-cont h3{
+    margin-bottom: 0px;
+}
+
+.whpag .cont .left-cont p{
+    font-size: 15px;
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+
+.whpag .cont .left-cont .edu{
+    margin-left: 8px;
+}
+
+.whpag .cont .left-cont .when{
+    margin-top: 12px;
+}
+
+
+.whpag .cont .right-cont h2{
+    padding-top: 1px;
+    padding-left: 10px;
+    background-color: rgb(236, 232, 232);
+    width: 44%;
+    border-radius: 20px;
+    margin-left: 15px;
+}
+
+.whpag .cont .right-cont p{
+    padding-left: 3px;
+    margin-left: 14px;
+    margin-bottom: 0px;
+    margin-top: 4px;
+}
+
+.whpag .cont .right-cont ul{
+    padding-left: 34px;
+}
+
+.whpag .cont .right-cont li{
+    margin-top: 2px;
+}
+
+.whpag .cont .right-cont hr{
+    margin-right: 28px;
+    margin-left: 18px;
+    margin-top: 28px;
+}
+
+.Resm button{
+    margin: auto;
+    margin-top: 20px;
+    background-color: rgb(146, 146, 214);
+    border-radius: 20px;
+    border: none;
+    width: 150px;
+    height: 30px;
+    transition: 0.5s ease;
+    font-size: 20px;
+}
+
+.Resm button:hover{
+    background-color: rgb(57, 57, 95);
+    transform: scale(1.2);
 }

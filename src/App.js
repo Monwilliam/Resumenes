@@ -1,7 +1,7 @@
 import Navbar from './Navbar';
 import { BrowserRouter as Router,Route, Routes } from 'react-router-dom';
 import Home from './Home';
-import About from './About';
+import Resmhtml from './Resmhtml';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/Resume' element={<Home/>}/>
           <Route path='/Coverletter' element={<Home/>}/>
-          <Route path='/About' element={<About/>}/>
+          <Route path='/About' element={<Resmhtml/>}/>
         </Routes>
       </div>
     </div>
