@@ -16,8 +16,8 @@ function Resmhtml() {
         doc.save("Document.pdf");
     }
     return (  
-        <div className='Resm'>
-            <div className="whpag" ref={cv}>
+        <div className='Resmhtml'>
+            <div className="Respage" ref={cv}>
                 <div className="Header">
                     <h1>Name</h1>
                     <h3>Job</h3>

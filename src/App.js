@@ -1,6 +1,7 @@
 import Navbar from './Navbar';
 import { BrowserRouter as Router,Route, Routes } from 'react-router-dom';
 import Home from './Home';
+import Coverhtml from './Coverhtml';
 import Resmhtml from './Resmhtml';
 
 function App() {
