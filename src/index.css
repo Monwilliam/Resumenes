@@ -1,9 +1,7 @@
 
-.App{
+body{
     background-image: url("./images/background.jpg");
     background-repeat: repeat;
-    height: 100vh;
-    overflow: hidden;
 }
 
 body{
@@ -14,7 +12,6 @@ body{
 .navbar{
     position: sticky;
     top: 0;
-    z-index: 1;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -63,11 +60,10 @@ body{
     display: flex;
     text-align: center;
     justify-content: center;
-    margin-top:270px;
+    margin-top:275px;
     margin-left: 14px;
     font-size: 40px;
     justify-content: space-around;
-    width: 100%;
 }
 
 .home .buttons a{
@@ -88,8 +84,7 @@ body{
 
 
 footer{
-    position: absolute;
-    top:860px;
+    margin-top: 315px;
     width: 100%;
     text-align: center;
 }
@@ -262,7 +257,7 @@ footer hr{
     width: 220%;
     right: 255px;
     height: 115px;
-    background-color: rgba(67, 172, 172, 0.432);
+    background-color: rgba(67, 172, 172, 0.376);
 }
 
 .Coverpage .Header{
