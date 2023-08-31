@@ -143,9 +143,11 @@ footer hr{
     grid-template-columns: 4.5fr 3.5fr;
 }
 
-.Respage .left-cont + .Respage .right-cont{
+ .left-cont + .right-cont{
     border-left: 2px solid ;
 } 
+
+
 
 .Respage .cont .left-cont {
     margin-left: 15px;
