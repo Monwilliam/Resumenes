@@ -147,7 +147,7 @@ function Resume(){
                     <summary>{exp.position}</summary>
                     <input className="inputfield" type="text" placeholder="Position" onChange={event => handleexppos(event,index)} value={exp.position}></input>
                     <input className="inputfield" type="text" placeholder="Company name" onChange={event => handleexpcomp(event,index)} value={exp.compname}></input>
-                    <div style={{display:'flex'}}><input className="smallinputfield" placeholder="start" type="text" onChange={event => handleexpstart(event,index)} value={exp.startdate}></input>&nbsp;&nbsp;&nbsp;-&nbsp;<input className="smallinputfield" placeholder="end" type="text" onChange={event => handleexpend(event,index)} value={exp.enddate}></input></div>
+                    <div style={{display:'flex'}}><input className="smallinputfield" placeholder="start" type="number" onChange={event => handleexpstart(event,index)} value={exp.startdate}></input>&nbsp;&nbsp;&nbsp;-&nbsp;<input className="smallinputfield" placeholder="end" type="number" onChange={event => handleexpend(event,index)} value={exp.enddate}></input></div>
                     <input className="inputfield" type="text" placeholder="Details" onChange={event => handleexpdet(event,index)} value={exp.details}></input>
                     <button className="delbut" onClick={event=> handledelexp(event,index)}>x</button>
                 </details>
@@ -163,7 +163,7 @@ function Resume(){
                 <details className="det">
                     <summary>{schl.school}</summary>
                     <input className="inputfield" type="text" placeholder="Institution name" onChange={event => handleeduschool(event,index)} value={schl.school}></input>
-                    <div style={{display:'flex'}}><input className="smallinputfield" placeholder="start" type="text" onChange={event => handleedustart(event,index)} value={schl.startdate}></input>&nbsp;&nbsp;&nbsp;-&nbsp;<input className="smallinputfield" placeholder="end" type="text" onChange={event => handleeduend(event,index)} value={schl.enddate}></input></div>
+                    <div style={{display:'flex'}}><input className="smallinputfield" placeholder="start" type="number" onChange={event => handleedustart(event,index)} value={schl.startdate}></input>&nbsp;&nbsp;&nbsp;-&nbsp;<input className="smallinputfield" placeholder="end" type="number" onChange={event => handleeduend(event,index)} value={schl.enddate}></input></div>
                     <input className="inputfield" type="text" placeholder="Details" onChange={event => handleedudetails(event,index)} value={schl.details}></input>
                     <button className="delbut" onClick={event=> handledeledu(event,index)}>x</button>
                 </details>
@@ -174,7 +174,7 @@ function Resume(){
     <h2>Add Contact info</h2>
     <input className="inputfield" placeholder="mobile number" onChange={handlecontacttel} type="number" value={contact.tel}></input>
     <input className="inputfield" placeholder="address" onChange={handlecontactadd} type="text" value={contact.address}></input>
-    <input className="inputfield" placeholder="email" onChange={handlecontactem} type="text" value={contact.email}></input>
+    <input className="inputfield" placeholder="email" onChange={handlecontactem} type="email" value={contact.email}></input>
     </>),(<>
     <h2>Write a summary about yourself</h2>
     <textarea className="biginputfield" onChange={handlesummary} type="text" value={summary}></textarea>
