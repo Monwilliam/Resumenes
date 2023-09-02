@@ -146,6 +146,7 @@ summary{
 
 .navbar h1{
     font-size: 30px;
+    color: white;
 }
 
 .navbar ul li a{
@@ -227,7 +228,7 @@ summary{
     margin: auto;
     margin-top:30px;
     width: 500px;
-    min-height: 200px;
+    min-height: 800px;
     background-color: white;
     font-size: smaller;
     font-family: 'Courier New', Courier, monospace;
