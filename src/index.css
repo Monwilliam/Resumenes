@@ -1,18 +1,18 @@
-
-body{
+body {
     background-image: url("./images/background.jpg");
     background-repeat: repeat;
 }
 
-body{
+body {
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
-.quiz-background{
+
+.quiz-background {
     position: absolute;
-    top:30%;
-    left:32%;
+    top: 30%;
+    left: 32%;
     padding: 10px;
     height: 60%;
     background-color: white;
@@ -20,33 +20,40 @@ body{
     border-radius: 30px;
     font-size: 18px;
 }
-.quiz-background input{
+
+.quiz-background input {
     font-size: 20px;
 }
-.quiz-background textarea{
+
+.quiz-background textarea {
     font-size: 19px;
 }
-.delbut{
-    color:white;
-    cursor:pointer;
-    background-color:red;
-    border-width:0px;
+
+.delbut {
+    color: white;
+    cursor: pointer;
+    background-color: red;
+    border-width: 0px;
     margin-left: 20%;
 }
-textarea{
+
+textarea {
     max-width: 80%;
 }
-.det{
+
+.det {
     margin-top: 5px;
     background-color: rgb(246, 246, 243);
     width: 97%;
     border-radius: 10px;
 }
-summary{
+
+summary {
     cursor: pointer;
 }
-.inputfield{
-    margin-left:4%;
+
+.inputfield {
+    margin-left: 4%;
     margin-top: 1%;
     width: 65%;
     height: 9%;
@@ -55,20 +62,22 @@ summary{
     border: 0;
     background-color: rgb(214, 214, 214);
 }
-.biginputfield{
-    margin-left:4%;
+
+.biginputfield {
+    margin-left: 4%;
     justify-items: flex-start;
     align-content: flex-start;
     padding: 20px;
     margin-top: 1%;
     width: 65%;
-    height:50%;
+    height: 50%;
     border-radius: 30px;
     border: 0;
     background-color: rgb(214, 214, 214);
 }
-.smallinputfield{
-    margin-left:4%;
+
+.smallinputfield {
+    margin-left: 4%;
     margin-top: 3px;
     width: 8%;
     text-align: center;
@@ -78,28 +87,31 @@ summary{
     border: 0;
     background-color: rgb(214, 214, 214);
 }
-.quiz-upper-cont{
+
+.quiz-upper-cont {
     border: solid black;
     display: flex;
     flex-direction: column;
     padding-left: 8px;
     margin: 0;
     width: 100%;
-    height:80%;
+    height: 80%;
     border-radius: 30px 30px 0 0;
     border-width: 0 0 1px 0px;
 }
-.contentshower{
+
+.contentshower {
     height: 100%;
     width: 90%;
-    overflow:scroll;
+    overflow: scroll;
     padding-top: 10px;
     padding-left: 20px;
     margin-top: 5%;
     margin-bottom: 5%;
     background-color: rgba(219, 219, 219, 0.664);
 }
-.quiz-lower-cont{
+
+.quiz-lower-cont {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -108,23 +120,26 @@ summary{
     padding-left: 20px;
     height: 20%;
 }
-.nextbutton{
-    background-color: rgb(10,11,23);
+
+.nextbutton {
+    background-color: rgb(10, 11, 23);
     color: white;
     cursor: pointer;
     width: 27%;
     height: 50%;
     border-radius: 30px;
 }
-.addbutton{
-    background-color: rgb(10,11,23);
+
+.addbutton {
+    background-color: rgb(10, 11, 23);
     color: white;
     cursor: pointer;
     width: 30px;
     height: 30px;
     border-radius: 15px;
 }
-.prevbutton{
+
+.prevbutton {
     background-color: white;
     color: black;
     border: solid black 2px;
@@ -133,14 +148,16 @@ summary{
     height: 50%;
     border-radius: 30px;
 }
-.navbar{
+
+.navbar {
     position: sticky;
     top: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.navbar ul{
+
+.navbar ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
@@ -151,12 +168,12 @@ summary{
     text-align: center;
 }
 
-.navbar h1{
+.navbar h1 {
     font-size: 30px;
     color: white;
 }
 
-.navbar ul li a{
+.navbar ul li a {
     text-decoration: none;
     color: white;
     background-color: rgba(0, 0, 0, 0);
@@ -173,25 +190,25 @@ summary{
 }
 
 
-.home h1{
-    color:white;
+.home h1 {
+    color: white;
     text-align: center;
     justify-content: center;
     margin-top: 70px;
     font-size: 50px;
 }
 
-.home .buttons{
+.home .buttons {
     display: flex;
     text-align: center;
     justify-content: center;
-    margin-top:275px;
+    margin-top: 275px;
     margin-left: 14px;
     font-size: 40px;
     justify-content: space-around;
 }
 
-.home .buttons a{
+.home .buttons a {
     background-color: #3F51B5;
     border-radius: 30px;
     font-size: 30px;
@@ -203,12 +220,12 @@ summary{
     transition: 0.5s ease;
 }
 
-.home .buttons a:hover{
+.home .buttons a:hover {
     transform: scale(1.1);
 }
 
 
-.home footer{
+.home footer {
     margin-top: 315px;
     width: 100%;
     text-align: center;
@@ -216,24 +233,24 @@ summary{
 
 
 
-.home footer a{
+.home footer a {
     font-size: 25px;
     text-decoration: none;
-    color:white;
+    color: white;
 }
 
-.home footer hr{
+.home footer hr {
     width: 80%;
 }
 
-.Resmhtml{
+.Resmhtml {
     display: flex;
     flex-direction: column;
 }
 
-.Respage{
+.Respage {
     margin: auto;
-    margin-top:30px;
+    margin-top: 30px;
     width: 500px;
     min-height: 200px;
     background-color: white;
@@ -242,28 +259,28 @@ summary{
 }
 
 
-.Respage .Header h3{
+.Respage .Header h3 {
     margin-bottom: 10px;
 }
 
-.Respage .Header{
+.Respage .Header {
     align-items: center;
     text-align: center;
     padding-top: 7px;
 }
 
-.Respage .Header hr{
+.Respage .Header hr {
     width: 90%;
 }
 
-.Respage .cont{
-    display:grid;
+.Respage .cont {
+    display: grid;
     grid-template-columns: 4.5fr 3.5fr;
 }
 
- .left-cont + .right-cont{
-    border-left: 2px solid ;
-} 
+.left-cont+.right-cont {
+    border-left: 2px solid;
+}
 
 
 
@@ -271,12 +288,12 @@ summary{
     margin-left: 15px;
 }
 
-.Respage .cont .left-cont .ex{
+.Respage .cont .left-cont .ex {
     margin-top: 8px;
     padding: 6px;
 }
 
-.Respage .cont .left-cont h2{
+.Respage .cont .left-cont h2 {
     padding-top: 1px;
     padding-left: 10px;
     background-color: rgb(233, 227, 227);
@@ -284,34 +301,34 @@ summary{
     width: 50%;
 }
 
-.Respage .cont .left-cont hr{
+.Respage .cont .left-cont hr {
     margin-right: 28px;
     margin-top: 20px;
 }
 
-.Respage .cont .left-cont h3{
+.Respage .cont .left-cont h3 {
     margin-bottom: 0px;
 }
 
-.Respage .cont .left-cont p{
+.Respage .cont .left-cont p {
     font-size: 15px;
     margin-top: 4px;
     margin-bottom: 0px;
 }
 
-.Respage .cont .left-cont .edu{
+.Respage .cont .left-cont .edu {
     margin-top: 7px;
 }
 
-.Respage .cont .left-cont .when{
+.Respage .cont .left-cont .when {
     margin-top: 20px;
 }
 
-.Respage .cont .right-cont{
+.Respage .cont .right-cont {
     background-color: rgba(0, 0, 0, 0.548);
 }
 
-.Respage .cont .right-cont h2{
+.Respage .cont .right-cont h2 {
     padding-top: 1px;
     padding-left: 10px;
     background-color: rgb(236, 232, 232);
@@ -320,19 +337,19 @@ summary{
     margin-left: 15px;
 }
 
-.Respage .cont .right-cont .contc-img{
+.Respage .cont .right-cont .contc-img {
     display: flex;
     align-items: center;
 }
 
-.Respage .cont .right-cont .icon{
+.Respage .cont .right-cont .icon {
     margin-top: 7px;
     margin-left: 10px;
     width: 15px;
     height: 15px;
 }
 
-.Respage .cont .right-cont p{
+.Respage .cont .right-cont p {
     color: white;
     padding-left: 3px;
     margin-left: 14px;
@@ -341,22 +358,22 @@ summary{
     line-height: 17px;
 }
 
-.Respage .cont .right-cont ul{
+.Respage .cont .right-cont ul {
     padding-left: 34px;
 }
 
-.Respage .cont .right-cont li{
+.Respage .cont .right-cont li {
     color: white;
     margin-top: 2px;
 }
 
-.Respage .cont .right-cont hr{
+.Respage .cont .right-cont hr {
     margin-right: 28px;
     margin-left: 18px;
     margin-top: 28px;
 }
 
-.Resmhtml button{
+.Resmhtml button {
     margin: auto;
     margin-top: 20px;
     background-color: rgb(146, 146, 214);
@@ -368,20 +385,20 @@ summary{
     font-size: 20px;
 }
 
-.Resmhtml button:hover{
+.Resmhtml button:hover {
     background-color: rgb(57, 57, 95);
     transform: scale(1.2);
 }
 
 
-.Coverhtml{
+.Coverhtml {
     display: flex;
     flex-direction: column;
 }
 
-.Coverpage{
+.Coverpage {
     margin: auto;
-    margin-top:30px;
+    margin-top: 30px;
     width: 500px;
     min-height: 700px;
     background-color: white;
@@ -390,50 +407,50 @@ summary{
     overflow: hidden;
 }
 
-.Coverpage hr{
+.Coverpage hr {
     position: relative;
     transform: rotate(300deg);
     border: none;
-    top :240px;
+    top: 240px;
     width: 220%;
     right: 255px;
     height: 115px;
     background-color: rgba(67, 172, 172, 0.376);
 }
 
-.Coverpage .Header{
+.Coverpage .Header {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.Coverpage .Header .left{
+.Coverpage .Header .left {
     margin-top: 30px;
     margin-left: 50px;
 }
 
-.Coverpage .Header .left h3{
+.Coverpage .Header .left h3 {
     margin-bottom: 3px;
 }
 
-.Coverpage .Header .left h1{
+.Coverpage .Header .left h1 {
     margin-top: 0px;
 }
 
-.Coverpage .Header .right{
+.Coverpage .Header .right {
     border-top: 6px solid;
     margin-right: 50px;
 }
 
-.Coverpage .Header .right .f{
+.Coverpage .Header .right .f {
     margin-top: 25px;
 }
 
-.Coverpage .Header .right h4{
+.Coverpage .Header .right h4 {
     margin-top: 0px;
     margin-bottom: 6px;
 }
 
-.Coverpage .cont{
+.Coverpage .cont {
     margin-left: 20px;
     margin-right: 20px;
     border-top: 6px solid;
@@ -442,34 +459,34 @@ summary{
     grid-template-columns: 1fr 3fr;
 }
 
-.Coverpage .cont .left{
+.Coverpage .cont .left {
     margin-top: 10px;
     margin-left: 10px;
 }
 
-.Coverpage .cont .left h4{
+.Coverpage .cont .left h4 {
     margin-top: 0px;
     margin-bottom: 6px;
 }
 
-.Coverpage .cont .right{
+.Coverpage .cont .right {
     margin-top: 12px;
     margin-left: 10px;
 }
 
-.Coverpage .cont .right h4{
+.Coverpage .cont .right h4 {
     margin-top: 0px;
 }
 
-.Coverpage .cont .right .last{
+.Coverpage .cont .right .last {
     margin-bottom: 6px;
 }
 
-.Coverpage .cont .right .lastname{
+.Coverpage .cont .right .lastname {
     margin-top: 0px;
 }
 
-.Coverhtml button{
+.Coverhtml button {
     margin: auto;
     margin-top: 20px;
     background-color: rgb(146, 146, 214);
@@ -481,19 +498,19 @@ summary{
     font-size: 20px;
 }
 
-.Coverhtml button:hover{
+.Coverhtml button:hover {
     background-color: rgb(57, 57, 95);
     transform: scale(1.2);
 }
 
-.About{
+.About {
     display: flex;
     height: 90vh;
     align-items: center;
     text-align: center;
 }
 
-.About .cont{
+.About .cont {
     display: flex;
     width: 100%;
     margin-left: 30px;
@@ -503,18 +520,18 @@ summary{
     align-items: center;
 }
 
-.About .cont img{
-    width:500px;
+.About .cont img {
+    width: 500px;
     height: 600px;
 }
 
-.About .cont h2{
+.About .cont h2 {
     width: 30%;
     line-height: 1.9;
     color: white;
 }
 
-.About footer{
+.About footer {
     width: 100%;
     position: absolute;
     text-align: center;
@@ -522,21 +539,21 @@ summary{
     margin-bottom: 50px;
 }
 
-.About footer a{
+.About footer a {
     font-size: 25px;
     transition: 0.5s ease;
     color: white;
     text-decoration: none;
 }
 
-.About footer a:hover{
+.About footer a:hover {
     color: #feb12f;
 }
 
-.About footer hr{
+.About footer hr {
     width: 80%;
 }
 
-p{
+p {
     word-wrap: break-word;
 }
