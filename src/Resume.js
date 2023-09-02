@@ -117,7 +117,20 @@ function Resume(){
         setSummary(event.target.value);
     }
     const [skills,setSkills]=useState([]);
-
+    const handleskill = (event,ind) =>{
+        let skill = skills[ind];
+        skill=event.target.value;
+        let bef = skills.slice(0,ind);
+        let aft = skills.slice(ind+1,skills.length);
+        let newexps = [...bef,skill,...aft];
+        setSkills(newexps);
+    }
+    const handledelskill = (event,ind) =>{
+        let bef = skills.slice(0,ind);
+        let aft = skills.slice(ind+1,skills.length);
+        let newexps = [...bef,...aft];
+        setSkills(newexps);
+    }
     let pages=[(<><h2>What is your name ?</h2>
     <input className="inputfield" onChange={handlename} type="text" value={name}></input>
     </>),(<><h2>What is your Title ?</h2>
@@ -163,6 +176,17 @@ function Resume(){
     </>),(<>
     <h2>Write a summary about yourself</h2>
     <textarea className="biginputfield" onChange={handlesummary} type="text" value={summary}></textarea>
+    </>),
+    (<><h2>Add Skills</h2>
+    <button className="addbutton" onClick={()=>{setSkills([...skills,""])}}>+</button>
+    <div className="contentshower">{skills.map(function(skl,index){
+            return(
+                <>
+                    <input className="inputfield" type="text" placeholder="Write the skill" onChange={event => handleskill(event,index)} value={skills[index]}></input>
+                    <button className="delbut" onClick={event=> handledelskill(event,index)}>x</button>
+                </>
+            );
+    })}</div>
     </>)];
     return(
 <>
