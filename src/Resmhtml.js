@@ -1,26 +1,54 @@
 import html2canvas from 'html2canvas';
-import { useRef } from 'react';
+import jsPDF from 'jspdf';
+import React from 'react';
 import { useLocation } from "react-router-dom";
+import telelogo from './images/telephone.png';
+import addresslogo from './images/address.png';
+import emaillogo from './images/email.png';
 
 
 function Resmhtml() {
     const location = useLocation();
     const info = location.state;
-    const cv = useRef();
-    async function generatePDF() {
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF("p", "pt");
-        await html2canvas(cv.current, {
-            width: 500,
-            height: 800,
-        }).then((canvas) => {
-            doc.addImage(canvas.toDataURL("image/png"), "PNG", 0, 0, 600, 890);
-        });
-        doc.save("Document.pdf");
-    }
+    const captureRef = React.useRef(null);
+    const generatePDF = async () => {
+        if (captureRef.current) {
+          const contentWidth = captureRef.current.offsetWidth;
+          const contentHeight = captureRef.current.offsetHeight;
+      
+          const pdf = new jsPDF('p', 'pt', [contentWidth, contentHeight]);
+          let position = 0;
+      
+          const renderPage = async () => {
+            const canvas = await html2canvas(captureRef.current, {
+              y: position,
+              scrollY: -position,
+              windowWidth: contentWidth,
+              windowHeight: contentHeight
+            });
+      
+            const imgData = canvas.toDataURL('image/png');
+            const imgProps = pdf.getImageProperties(imgData);
+            const pdfWidth = pdf.internal.pageSize.getWidth();
+            const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+      
+            pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+            position -= contentHeight;
+      
+            if (position > -contentHeight) {
+              pdf.addPage();
+              await renderPage();
+            } else {
+              pdf.save('capture.pdf');
+            }
+          };
+      
+          await renderPage();
+        }
+      };
     return (
         <div className='Resmhtml'>
-            <div className="Respage" ref={cv}>
+            <div className="Respage" ref={captureRef}>
                 <div className="Header">
                     <h1>{info.Name}</h1>
                     <h3>{info.Title}</h3>
@@ -51,9 +79,9 @@ function Resmhtml() {
                     </div>
                     <div className="right-cont">
                         <h2>Contact</h2>
-                        <p>{info.Contact.tel}</p>
-                        <p>{info.Contact.address}</p>
-                        <p>{info.Contact.email}</p>
+                        <div className='contc-img'><p>{info.Contact.tel}</p><img className="icon" src={telelogo} alt="telephone icon"/></div>
+                        <div className='contc-img'><p>{info.Contact.address}</p><img className="icon" src={addresslogo} alt="address icon"/></div>
+                        <div className='contc-img'><p>{info.Contact.email}</p><img className="icon" src={emaillogo} alt="email icon"/></div>
                         <hr />
                         <h2>Summary</h2>
                         <p>{info.Summary}</p>

@@ -6,7 +6,7 @@ function Home() {
             <h1>Resumenes</h1>
             <div className="buttons">
             <Link  to='/Resume'>Create Resume</Link>
-            <Link  to='/Coverleeter'>Create Coverletter</Link>
+            <Link  to='/Coverletter'>Create Coverletter</Link>
             </div>
             <footer>
             <Link  to='/About'>About</Link>

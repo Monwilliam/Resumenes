@@ -1,26 +1,51 @@
 import html2canvas from 'html2canvas';
-import {useRef} from 'react';
+import jsPDF from 'jspdf';
+import React from 'react';
 import { useLocation } from "react-router-dom";
 
 
 function Coverhtml() {
     const location = useLocation();
     const info = location.state;
-    const cv = useRef();
-    async function generatePDF() {
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF("p", "pt");
-        await html2canvas(cv.current, {
-            width: 500,
-            height: 800,
-        }).then((canvas) => {
-            doc.addImage(canvas.toDataURL("image/png"), "PNG", 0, 0, 600, 890);
-        });
-        doc.save("Document.pdf");
-    }
+    const captureRef = React.useRef(null);
+    const generatePDF = async () => {
+        if (captureRef.current) {
+          const contentWidth = captureRef.current.offsetWidth;
+          const contentHeight = captureRef.current.offsetHeight;
+      
+          const pdf = new jsPDF('p', 'pt', [contentWidth, contentHeight]);
+          let position = 0;
+      
+          const renderPage = async () => {
+            const canvas = await html2canvas(captureRef.current, {
+              y: position,
+              scrollY: -position,
+              windowWidth: contentWidth,
+              windowHeight: contentHeight
+            });
+      
+            const imgData = canvas.toDataURL('image/png');
+            const imgProps = pdf.getImageProperties(imgData);
+            const pdfWidth = pdf.internal.pageSize.getWidth();
+            const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+      
+            pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+            position -= contentHeight;
+      
+            if (position > -contentHeight) {
+              pdf.addPage();
+              await renderPage();
+            } else {
+              pdf.save('capture.pdf');
+            }
+          };
+      
+          await renderPage();
+        }
+      };
     return (  
         <div className="Coverhtml" >
-            <div className="Coverpage" ref={cv}>
+            <div className="Coverpage" ref={captureRef}>
                 <hr/>
                 <div className='Header'>
                     <div className="left">

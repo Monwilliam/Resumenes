@@ -221,14 +221,13 @@ summary{
 .Resmhtml{
     display: flex;
     flex-direction: column;
-    height: 830px;
 }
 
 .Respage{
     margin: auto;
     margin-top:30px;
     width: 500px;
-    height: 800px;
+    min-height: 200px;
     background-color: white;
     font-size: smaller;
     font-family: 'Courier New', Courier, monospace;
@@ -247,7 +246,6 @@ summary{
 
 .Respage .Header hr{
     width: 90%;
-    margin-bottom: 8px;
 }
 
 .Respage .cont{
@@ -266,6 +264,7 @@ summary{
 }
 
 .Respage .cont .left-cont .ex{
+    margin-top: 8px;
     padding: 6px;
 }
 
@@ -300,7 +299,9 @@ summary{
     margin-top: 20px;
 }
 
-
+.Respage .cont .right-cont{
+    background-color: rgba(0, 0, 0, 0.548);
+}
 
 .Respage .cont .right-cont h2{
     padding-top: 1px;
@@ -311,11 +312,25 @@ summary{
     margin-left: 15px;
 }
 
+.Respage .cont .right-cont .contc-img{
+    display: flex;
+    align-items: center;
+}
+
+.Respage .cont .right-cont .icon{
+    margin-top: 7px;
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
+}
+
 .Respage .cont .right-cont p{
+    color: white;
     padding-left: 3px;
     margin-left: 14px;
     margin-bottom: 0px;
-    margin-top: 4px;
+    margin-top: 10px;
+    line-height: 17px;
 }
 
 .Respage .cont .right-cont ul{
@@ -323,6 +338,7 @@ summary{
 }
 
 .Respage .cont .right-cont li{
+    color: white;
     margin-top: 2px;
 }
 
@@ -467,15 +483,28 @@ summary{
 .About{
     display: flex;
     height: 90vh;
-    width: 70%;
-    margin: auto;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    line-height: 1.6;
 }
 
-.About h2{
+.About .cont{
+    display: flex;
+    width: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.About .cont img{
+    width:500px;
+    height: 600px;
+}
+
+.About .cont h2{
+    width: 30%;
+    line-height: 1.9;
     color: white;
 }
 
