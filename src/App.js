@@ -1,9 +1,11 @@
 import Navbar from './Navbar';
 import { BrowserRouter as Router,Route, Routes } from 'react-router-dom';
 import Home from './Home';
-import Coverhtml from './Coverhtml';
-import Resmhtml from './Resmhtml';
 import Resume from './Resume'; 
+import About from './About';
+
+
+
 function App() {
   return (
     <Router>
@@ -14,7 +16,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/Resume' element={<Resume/>}/>
           <Route path='/Coverletter' element={<Home/>}/>
-          <Route path='/About' element={<Resmhtml/>}/>
+          <Route path='/About' element={<About/>}/>
         </Routes>
       </div>
     </div>
