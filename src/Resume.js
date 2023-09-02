@@ -67,7 +67,7 @@ function Resume(){
         let edctn = education[ind];
         edctn.school=event.target.value;
         let bef = education.slice(0,ind);
-        let aft = education.slice(ind+1,experiences.length);
+        let aft = education.slice(ind+1,education.length);
         let newexps = [...bef,edctn,...aft];
         setEducation(newexps);
     }
@@ -75,7 +75,7 @@ function Resume(){
         let edctn = education[ind];
         edctn.startdate=event.target.value;
         let bef = education.slice(0,ind);
-        let aft = education.slice(ind+1,experiences.length);
+        let aft = education.slice(ind+1,education.length);
         let newexps = [...bef,edctn,...aft];
         setEducation(newexps);
     }
@@ -83,7 +83,7 @@ function Resume(){
         let edctn = education[ind];
         edctn.enddate=event.target.value;
         let bef = education.slice(0,ind);
-        let aft = education.slice(ind+1,experiences.length);
+        let aft = education.slice(ind+1,education.length);
         let newexps = [...bef,edctn,...aft];
         setEducation(newexps);
     }
@@ -91,13 +91,13 @@ function Resume(){
         let edctn = education[ind];
         edctn.details=event.target.value;
         let bef = education.slice(0,ind);
-        let aft = education.slice(ind+1,experiences.length);
+        let aft = education.slice(ind+1,education.length);
         let newexps = [...bef,edctn,...aft];
         setEducation(newexps);
     }
     const handledeledu = (event,ind) =>{
         let bef = education.slice(0,ind);
-        let aft = education.slice(ind+1,experiences.length);
+        let aft = education.slice(ind+1,education.length);
         let newexps = [...bef,...aft];
         setEducation(newexps);
     }
