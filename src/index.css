@@ -243,7 +243,6 @@ summary{
 
 .Respage .Header hr{
     width: 90%;
-    margin-bottom: 8px;
 }
 
 .Respage .cont{
@@ -262,6 +261,7 @@ summary{
 }
 
 .Respage .cont .left-cont .ex{
+    margin-top: 8px;
     padding: 6px;
 }
 
@@ -296,6 +296,10 @@ summary{
     margin-top: 20px;
 }
 
+.Respage .cont .right-cont{
+    background-color: rgba(0, 0, 0, 0.548);
+}
+
 .Respage .cont .right-cont h2{
     padding-top: 1px;
     padding-left: 10px;
@@ -318,10 +322,12 @@ summary{
 }
 
 .Respage .cont .right-cont p{
+    color: white;
     padding-left: 3px;
     margin-left: 14px;
     margin-bottom: 0px;
-    margin-top: 4px;
+    margin-top: 10px;
+    line-height: 17px;
 }
 
 .Respage .cont .right-cont ul{
@@ -329,6 +335,7 @@ summary{
 }
 
 .Respage .cont .right-cont li{
+    color: white;
     margin-top: 2px;
 }
 
