@@ -289,12 +289,13 @@ summary{
 }
 
 .Respage .cont .left-cont .edu{
-    margin-left: 8px;
+    margin-top: 7px;
 }
 
 .Respage .cont .left-cont .when{
-    margin-top: 12px;
+    margin-top: 20px;
 }
+
 
 
 .Respage .cont .right-cont h2{
@@ -461,7 +462,6 @@ summary{
 
 .About{
     display: flex;
-    flex-direction:column ;
     height: 90vh;
     width: 70%;
     margin: auto;
@@ -496,4 +496,8 @@ summary{
 
 .About footer hr{
     width: 80%;
+}
+
+p{
+    word-wrap: break-word;
 }

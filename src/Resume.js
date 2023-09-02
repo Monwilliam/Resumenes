@@ -1,9 +1,11 @@
 
 import React,{useState} from "react";
+import { useNavigate } from "react-router-dom";
 
 
 
 function Resume(){
+    const navigate =useNavigate();
     const [index,setIndex]=useState(0);
     const [title,setTitle]=useState("");
     const handletitle = event => {
@@ -188,6 +190,13 @@ function Resume(){
             );
     })}</div>
     </>)];
+
+    function onsubmity(){
+        navigate("./Resmhtml", {
+            state: {Name:name,Title:title,Contact:contact,Skills:skills,Summary:summary,Education:education,Experiences:experiences},
+        });
+    }
+
     return(
 <>
 <div className="quiz-background">
@@ -199,7 +208,7 @@ function Resume(){
         <button className="nextbutton" onClick={()=>{setIndex(index+1)}}>Next</button>
         }
         {index===pages.length-1 &&
-            <button className="nextbutton" onClick={()=>{}}>Submit</button>
+            <button className="nextbutton" onClick={onsubmity}>Submit</button>
         }
         {(index!==0)&&
         <button className="prevbutton" onClick={()=>{setIndex(index-1)}}>Previous</button>

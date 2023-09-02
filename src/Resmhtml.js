@@ -1,8 +1,11 @@
 import html2canvas from 'html2canvas';
-import {useRef} from 'react';
+import { useRef } from 'react';
+import { useLocation } from "react-router-dom";
 
 
 function Resmhtml() {
+    const location = useLocation();
+    const info = location.state;
     const cv = useRef();
     async function generatePDF() {
         const { jsPDF } = window.jspdf;
@@ -15,77 +18,61 @@ function Resmhtml() {
         });
         doc.save("Document.pdf");
     }
-    return (  
+    return (
         <div className='Resmhtml'>
             <div className="Respage" ref={cv}>
                 <div className="Header">
-                    <h1>Name</h1>
-                    <h3>Job</h3>
-                    <hr/>
+                    <h1>{info.Name}</h1>
+                    <h3>{info.Title}</h3>
+                    <hr />
                 </div>
                 <div className="cont">
                     <div className="left-cont">
                         <h2 className='ex'>Experience</h2>
-                        <h3>headinfo</h3>
-                        <p>almkan</p>
-                        <p>when</p>
-                        <ul>
-                            <li>info</li>
-                            <li>info</li>
-                            <li>info</li>
-                        </ul>
-                        <h3>headinfo</h3>
-                        <p >almkan</p>
-                        <p >when</p>
-                        <ul>
-                            <li>info</li>
-                            <li>info</li>
-                            <li>info</li>
-                        </ul>
-                        <hr/>
+                        {info.Experiences.map((e, i) => (
+                            <div key={i}>
+                                <h3>{e.position}</h3>
+                                <p>{e.compname}</p>
+                                <p>{e.startdate}-{e.enddate}</p>
+                                <p>{e.details}</p>
+                            </div>
+                        ))
+                        }
+                        <hr />
                         <h2>Education</h2>
-                        <p className="when">when</p>
-                        <p className="edu">University<br/>info</p>
-                        <p className="when">when</p>
-                        <p className="edu">University<br/>info</p>
-                        <p className="when">when</p>
-                        <p className="edu">University<br/>info</p>
+                        {info.Education.map((e, i) => (
+                            <div key={i}>
+                                <p className="when">{e.startdate}-{e.enddate}</p>
+                                <h3 className="edu">{e.school}</h3>
+                                <p>{e.details}</p>
+                            </div>
+                        ))
+                        }
                     </div>
                     <div className="right-cont">
                         <h2>Contact</h2>
-                        <p>info</p>
-                        <p>info</p>
-                        <p>info</p>
-                        <p>info</p>
-                        <hr/>
+                        <p>{info.Contact.tel}</p>
+                        <p>{info.Contact.address}</p>
+                        <p>{info.Contact.email}</p>
+                        <hr />
                         <h2>Summary</h2>
-                        <p>info</p>
-                        <p>info</p>
-                        <p>info</p>
-                        <p>info</p>
-                        <p>info</p>
-                        <p>info</p>
-                        <p>info</p>
-                        <p>info</p>
-                        <hr/>
+                        <p>{info.Summary}</p>
+                        <hr />
                         <h2>Skills</h2>
                         <ul>
-                            <li>info</li>
-                            <li>info</li>
-                            <li>info</li>
-                            <li>info</li>
-                            <li>info</li>
-                            <li>info</li>
-                            <li>info</li>
-                            <li>info</li>
-                            <li>info</li>
+                        {info.Skills.map((e, i) => (
+                            <div key={i}>
+                                <li>{e}</li>
+                            </div>
+                        ))
+                        }
                         </ul>
                     </div>
                 </div>
             </div>
-        <button onClick={generatePDF}>Download pdf</button>
+            <button onClick={generatePDF}>Download pdf</button>
         </div>
     );
 }
- 
+
 export default Resmhtml;
