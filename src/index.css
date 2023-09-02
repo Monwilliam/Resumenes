@@ -18,6 +18,13 @@ body{
     background-color: white;
     width: 36%;
     border-radius: 30px;
+    font-size: 18px;
+}
+.quiz-background input{
+    font-size: 20px;
+}
+.quiz-background textarea{
+    font-size: 19px;
 }
 .delbut{
     color:white;
