@@ -296,8 +296,6 @@ summary{
     margin-top: 20px;
 }
 
-
-
 .Respage .cont .right-cont h2{
     padding-top: 1px;
     padding-left: 10px;
@@ -305,6 +303,18 @@ summary{
     width: 44%;
     border-radius: 20px;
     margin-left: 15px;
+}
+
+.Respage .cont .right-cont .contc-img{
+    display: flex;
+    align-items: center;
+}
+
+.Respage .cont .right-cont .icon{
+    margin-top: 3px;
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
 }
 
 .Respage .cont .right-cont p{
@@ -463,15 +473,28 @@ summary{
 .About{
     display: flex;
     height: 90vh;
-    width: 70%;
-    margin: auto;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    line-height: 1.6;
 }
 
-.About h2{
+.About .cont{
+    display: flex;
+    width: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.About .cont img{
+    width:500px;
+    height: 600px;
+}
+
+.About .cont h2{
+    width: 30%;
+    line-height: 1.9;
     color: white;
 }
 

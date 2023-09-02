@@ -1,6 +1,9 @@
 import html2canvas from 'html2canvas';
 import { useRef } from 'react';
 import { useLocation } from "react-router-dom";
+import telelogo from './images/telephone.png';
+import addresslogo from './images/address.png';
+import emaillogo from './images/email.png';
 
 
 function Resmhtml() {
@@ -51,9 +54,9 @@ function Resmhtml() {
                     </div>
                     <div className="right-cont">
                         <h2>Contact</h2>
-                        <p>{info.Contact.tel}</p>
-                        <p>{info.Contact.address}</p>
-                        <p>{info.Contact.email}</p>
+                        <div className='contc-img'><p>{info.Contact.tel}</p><img className="icon" src={telelogo} alt="telephone icon"/></div>
+                        <div className='contc-img'><p>{info.Contact.address}</p><img className="icon" src={addresslogo} alt="address icon"/></div>
+                        <div className='contc-img'><p>{info.Contact.email}</p><img className="icon" src={emaillogo} alt="email icon"/></div>
                         <hr />
                         <h2>Summary</h2>
                         <p>{info.Summary}</p>
