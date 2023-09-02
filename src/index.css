@@ -217,14 +217,13 @@ summary{
 .Resmhtml{
     display: flex;
     flex-direction: column;
-    height: 830px;
 }
 
 .Respage{
     margin: auto;
     margin-top:30px;
     width: 500px;
-    height: 800px;
+    min-height: 200px;
     background-color: white;
     font-size: smaller;
     font-family: 'Courier New', Courier, monospace;
@@ -315,7 +314,7 @@ summary{
 }
 
 .Respage .cont .right-cont .icon{
-    margin-top: 3px;
+    margin-top: 7px;
     margin-left: 10px;
     width: 15px;
     height: 15px;
