@@ -1,13 +1,16 @@
-const express = require('express')
-const dotenv = require('dotenv');
-const mongoose = require('mongoose');
+const express = require("express");
+const dotenv = require("dotenv");
+const mongoose = require("mongoose");
 const authRouter = require("./Routes/auth.route.js");
+const resumeRouter = require("./Routes/resume.route.js");
 const authMiddleware = require("./MiddleWares/auth.middleware.js");
 const userRouter = require("./Routes/user.route.js");
+const cors = require("cors");
 
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8080;
+app.use(cors());
 
 mongoose
   .connect(process.env.DB_URI)
@@ -19,6 +22,7 @@ mongoose
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/auth", authRouter);
+app.use("/resume", resumeRouter);
 app.use("/user", authMiddleware, userRouter);
 app.get("/", (req, res) => {
   res.send("Hello World!");
