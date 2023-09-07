@@ -74,10 +74,27 @@ flashy words and exclamation marks. Keep it brief and easy to read.</h6>
     <textarea className="biginputfield" onChange={handlepara2} type="text" value={para2}></textarea>
     </>)];
 
-    function onsubmity(){
+    const onsubmity = async (e) => {
         navigate("./Coverhtml", {
             state: {Name:name,Title:title,Contact:contact,Employer:employer,Para1:para1,Para2:para2},
         });
+        e.preventDefault();
+        const body = {
+          Name: name,
+          Title: title,
+          Contact: contact,
+          Employer:employer,
+          Para1:para1,
+          Para2:para2,
+        };
+        fetch(
+          `http://localhost:8080/cover/post/${localStorage.getItem("userId")}`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(body),
+          }
+        );
     }
 
     return(

@@ -23,6 +23,7 @@ export default function Login() {
         body: JSON.stringify(loginTry),
       });
       const data = await response.json();
+      console.log(data.token);
       fetch("http://localhost:8080/auth/me", {
         method: "GET",
         headers: { Authorization: "Bearer " + data.token },

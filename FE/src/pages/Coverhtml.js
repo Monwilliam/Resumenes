@@ -4,9 +4,9 @@ import React from 'react';
 import { useLocation } from "react-router-dom";
 
 
-function Coverhtml() {
+function Coverhtml({ cover, show }) {
     const location = useLocation();
-    const info = location.state;
+    const info = show ? cover : location.state;
     const captureRef = React.useRef(null);
     const generatePDF = async () => {
         if (captureRef.current) {

@@ -5,4 +5,3 @@ const userRouter = Router()
 userRouter.get('/', userController.user)
 
 module.exports = userRouter
-// module.exports= userRouter
