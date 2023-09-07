@@ -1,6 +1,6 @@
 import{Link} from 'react-router-dom';
-import cvicon from './images/cv.png';
-import Coverlettericon from './images/coverletter.png';
+import cvicon from '../images/cv.png';
+import Coverlettericon from '../images/coverletter.png';
 
 function About(){
     return (  
