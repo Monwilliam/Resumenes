@@ -30,7 +30,7 @@ function Profile() {
   }, []);
   return (
     <div className="container">
-      <div>
+      <div className="Left">
         {covers ? (
           covers.map((cover) => {
             console.log(cover);
@@ -51,7 +51,7 @@ function Profile() {
           <div></div>
         )}
       </div>
-      <div>
+      <div className="Right">
         {resumes ? (
           resumes.map((resume) => {
             console.log(resume);

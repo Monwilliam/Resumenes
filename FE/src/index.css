@@ -153,6 +153,7 @@ summary {
     position: sticky;
     top: 0;
     display: flex;
+    z-index: 1;
     justify-content: space-around;
     align-items: center;
 }
@@ -167,6 +168,7 @@ summary {
     align-items: center;
     text-align: center;
 }
+
 
 .navbar h1 {
     font-size: 30px;
@@ -186,9 +188,13 @@ summary {
 
 .navbar ul li a:hover {
     color: #feb12f;
-    transition: 0.5s;
+    box-shadow: 0px 0px 10px 0px #000000;
+    transition: 0.5s ease ;
 }
 
+.navbar ul li .log{
+    margin-left: 200px;
+}
 
 .home h1 {
     color: white;

@@ -31,6 +31,7 @@ export default function Login() {
         .then((res) => res.json())
         .then((data) => {
           localStorage.setItem("userId", data.user._id);
+          localStorage.setItem("logged", "true");
         });
     } catch (error) {
       console.error(error);
