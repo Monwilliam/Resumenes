@@ -3,6 +3,23 @@ const { Schema, model } = require("mongoose");
 const ResumeSchema = new Schema({
   Name: String,
   Title: String,
+  Contact: {
+    tel: Number,
+    address: String,
+    email: String,
+  },
+  Skills: {
+    type: [String],
+  },
+  Summary: String,
+  Education: [
+    {
+      school: String,
+      startdate: Number,
+      enddate: Number,
+      details: String,
+    },
+  ],
   Experiences: [
     {
       position: String,
@@ -12,25 +29,6 @@ const ResumeSchema = new Schema({
       details: String,
     },
   ],
-  Education: [
-    {
-      school: String,
-      startdate: Number,
-      enddate: Number,
-      details: String,
-    },
-  ],
-  Contact: [
-    {
-      tel: Number,
-      address: String,
-      email: String,
-    },
-  ],
-  Summary: String,
-  Skills: {
-    type: [String],
-  },
   owner: String,
 });
 

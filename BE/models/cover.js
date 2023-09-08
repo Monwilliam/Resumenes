@@ -3,13 +3,11 @@ const { Schema, model } = require("mongoose");
 const CoverSchema = new Schema({
   Name: String,
   Title: String,
-  Contact: [
-    {
-      tel: Number,
-      address: String,
-      email: String,
-    },
-  ],
+  Contact: {
+    tel: Number,
+    address: String,
+    email: String,
+  },
   Employer: [
     {
       name: String,
