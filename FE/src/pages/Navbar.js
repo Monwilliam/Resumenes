@@ -1,34 +1,27 @@
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
 function Navbar() {
-  let logged = "false";
-  let linkR = "/Login";
-  let linkC = "/Login";
+  const logged = localStorage.getItem("logged");
+  const linkR = logged === "true" ? "/Resume" : "/Login";
+  const linkC = logged === "true" ? "/Coverletter" : "/Login";
   const [bgColor, setBgColor] = useState("transparent");
+  const navigate = useNavigate();
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
-      setBgColor("rgba(0,71,100,0.5)");
+      setBgColor("rgba(0,71,171,0.3)");
     } else {
       setBgColor("transparent");
     }
   };
 
   const handleclickb = () => {
-    localStorage.setItem("userId",null);
-    localStorage.setItem("logged","false");
-  }
-
-  const pressrescov= () => {
-    logged= localStorage.getItem("logged");
-    linkR = logged === "true" ? "/Resume" : "/Login";
-    linkC = logged === "true" ? "/Coverletter" : "/Login";
-    console.log(logged);
-    console.log(localStorage.getItem("logged"));
-    console.log(linkR);
-  }
-   
+    localStorage.setItem("userId", null);
+    localStorage.setItem("logged", "false");
+    navigate("/");
+    window.location.reload();
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -45,10 +38,10 @@ function Navbar() {
           <Link to="/"> Home </Link>
         </li>
         <li>
-          <Link to={linkR} onClick={pressrescov}> Resume </Link>
+          <Link to={linkR}> Resume </Link>
         </li>
         <li>
-          <Link to={linkC} onClick={pressrescov}> Coverletter </Link>
+          <Link to={linkC}> Coverletter </Link>
         </li>
         <li>
           <Link to="/About"> About </Link>

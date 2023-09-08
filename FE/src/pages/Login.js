@@ -12,6 +12,11 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
+
+  const refresh = () => {
+    window.location.reload();
+  };
+
   const handleClick = async (e) => {
     e.preventDefault();
     const loginTry = { email, password };
@@ -36,8 +41,10 @@ export default function Login() {
     } catch (error) {
       console.error(error);
     }
+    setTimeout(() => {
+      refresh();
+    }, 200);
   };
-
   return (
     <div>
       <Paper
@@ -66,7 +73,7 @@ export default function Login() {
           style={{ margin: "5px 5px" }}
           onClick={handleClick}
         >
-          <Link to="/">Login</Link>
+          <Link to="/Profile">Login</Link>
         </Button>
         <Button
           fullWidth={true}
