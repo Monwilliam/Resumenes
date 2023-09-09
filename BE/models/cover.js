@@ -8,13 +8,12 @@ const CoverSchema = new Schema({
     address: String,
     email: String,
   },
-  Employer: [
+  Employer:
     {
       name: String,
       title: String,
       address: String,
     },
-  ],
   Para1: String,
   Para2: String,
   owner: String,

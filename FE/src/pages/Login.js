@@ -92,7 +92,7 @@ export default function Login() {
         </Paper>
       </div>
       <div className={ispending===true ? "loading hide":"loading" }></div>
-      <div>{handlelog && ispending && navigate("/Profile")}</div>
+      {handlelog && ispending && navigate("/Profile")}
     </div>
     
   );
